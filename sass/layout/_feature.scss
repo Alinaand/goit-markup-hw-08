@@ -1,0 +1,43 @@
+.feature {
+  display: flex;
+  justify-items: center;
+  margin-right: -30px;
+}
+.feature__card {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+  margin-right: 30px;
+}
+.feature__image {
+  padding: 25px 102px;
+  background-color: var(--section-bg);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.feature__icon {
+  width: 65px;
+  height: 70px;
+}
+/*
+  .feature-card::before {
+    content: "";
+    width: 270px;
+    height: 120px;background-image: url("../icons/antenna.svg");
+    background-repeat: no-repeat;
+    display: inline-flex;
+  background-position: center;
+  background-color: var(--secondary-text-cl);
+  } */
+
+.feature__title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.feature__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-cl);
+}

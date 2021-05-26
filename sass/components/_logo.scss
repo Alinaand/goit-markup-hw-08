@@ -1,0 +1,16 @@
+a span {
+  color: var(--accent-cl);
+}
+.logo {
+  display: inline-block;
+  margin-right: 93px;
+
+  color: var(--main-text-cl);
+
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--title-font);
+  font-size: 26px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}

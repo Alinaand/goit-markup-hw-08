@@ -1,0 +1,20 @@
+.hero-section__btn {
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  min-height: 50px;
+  background-color: var(--accent-cl);
+  color: var(--alt-text-cl);
+  border: none;
+}
+.btn {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}

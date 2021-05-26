@@ -1,0 +1,40 @@
+.page-footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  color: var(--alt-text-cl);
+  background-color: var(--dark-bg);
+}
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer__contacts {
+  margin-right: 70px;
+}
+
+.page-footer__item a {
+  display: inline-block;
+}
+.page-footer__logo {
+  margin-bottom: 20px;
+  color: var(--alt-text-cl);
+}
+
+.page-footer__item {
+  display: block;
+  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.page-footer__item:last-child {
+  margin-bottom: 0;
+}
+
+.page-footer__item .contacts {
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 0;
+}
