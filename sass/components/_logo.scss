@@ -3,14 +3,19 @@ a span {
 }
 .logo {
   display: inline-block;
-  margin-right: 93px;
+  font-size: 24px;
+  line-height: 1.17;
 
   color: var(--main-text-cl);
 
   font-style: normal;
   font-weight: bold;
   font-family: var(--title-font);
-  font-size: 26px;
-  line-height: 1.18;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1199px) {
+    font-size: 26px;
+    line-height: 1.18;
+    margin-right: 93px;
+  }
 }
