@@ -88,13 +88,13 @@ img {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     max-width: 480px;
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 
@@ -280,6 +280,12 @@ a span {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 93px 15px 94px;
+  }
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -291,8 +297,6 @@ a span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 581px;
-  min-width: 528px;
   padding: 40px;
   /*
       max-height: 100vh;
@@ -301,6 +305,20 @@ a span {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    min-width: 528px;
+  }
 }
 
 .form {
@@ -489,6 +507,22 @@ a span {
   padding-bottom: 32px;
 }
 
+.btn-menu {
+  display: inline-flex;
+}
+
+.btn-menu .icon-close {
+  display: none;
+}
+
+.btn-menu.is-open .icon-close {
+  display: block;
+}
+
+.btn-menu.is-open .icon-menu {
+  display: none;
+}
+
 .menu__item {
   position: relative;
 }
@@ -521,14 +555,16 @@ a span {
 }
 
 .contacts {
-  display: flex;
-  margin-right: 15px;
-  color: var(--secondary-text-cl);
-  margin-left: auto;
+  display: none;
 }
 
-.contacts__last {
-  margin-left: 32px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    margin-right: 15px;
+    color: var(--secondary-text-cl);
+    margin-left: auto;
+  }
 }
 
 .contacts__item {
@@ -539,6 +575,12 @@ a span {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item:last-of-type {
+    margin-left: 32px;
+  }
 }
 
 .contacts__icon-envelope {
@@ -556,12 +598,14 @@ a span {
 }
 
 .page-header {
+  outline: 1px solid red;
   border-bottom: 1px solid #ececec;
 }
 
 .page-header__container {
   display: flex;
   align-items: center;
+  outline: 1px solid red;
 }
 
 .page-header .link {
@@ -571,11 +615,19 @@ a span {
 .nav {
   display: flex;
   align-items: center;
+  outline: 1px solid red;
 }
 
 .page-hader__nav {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .page-hader__nav {
+    display: flex;
+    align-items: center;
+    outline: 1px solid red;
+  }
 }
 
 .hero-section {
@@ -727,12 +779,17 @@ a span {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-right: 30px;
+  margin-bottom: 30px;
   background-color: var(--main-bg);
 }
 
 @media screen and (min-width: 1200px) {
   .team__card {
     flex-basis: calc((100% - 120px) / 4);
+    margin-bottom: 0;
+  }
+  .team__card:last-of-type {
+    margin-right: 0;
   }
 }
 
@@ -740,10 +797,9 @@ a span {
   .team__card {
     flex-basis: calc((100% - 60px) / 2);
   }
-}
-
-.team__card:last-of-type {
-  margin-right: 0;
+  .team__card:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 .team__name {
