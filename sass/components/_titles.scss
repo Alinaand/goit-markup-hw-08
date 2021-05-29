@@ -8,20 +8,19 @@
   line-height: 1, 36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     font-size: 26px;
     line-height: 1.62;
   }
 }
 .section__title {
   letter-spacing: 0.03em;
-
-  text-align: center;
-  @media screen and (max-width: 767px) {
-    font-size: 28px;
+  font-size: 28px;
     line-height: 1.18;
     margin-bottom: 30px;
-  }
+
+  text-align: center;
+  
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
     font-size: 36px;
