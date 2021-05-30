@@ -560,6 +560,7 @@ a span {
     top: 100%;
     width: 100%;
     left: 0;
+    overflow: scroll;
   }
   .menu__container.is-open {
     display: flex;
@@ -753,17 +754,25 @@ a span {
 }
 
 @media screen and (max-width: 767px) {
-  .menu__container--link {
-    font-size: 14px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
+  .menu__container--social {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 40px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .menu__container--link {
+  .menu__container--social {
     display: none;
   }
+}
+
+.social__link {
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  margin-right: 20px;
 }
 
 .page-header {
