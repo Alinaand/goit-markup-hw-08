@@ -647,113 +647,6 @@ a span {
 }
 
 @media screen and (max-width: 767px) {
-  .contacts {
-    margin-right: 40px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    margin-right: 15px;
-    color: var(--secondary-text-cl);
-    margin-left: 15px;
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    flex-direction: row;
-  }
-}
-
-.contacts__item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  margin-bottom: 32px;
-}
-
-@media screen and (max-width: 767px) {
-  .contacts__item:last-of-type {
-    margin-bottom: 64px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__item {
-    display: flex;
-    align-items: center;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts__item {
-    font-size: 14px;
-    line-height: 1.17;
-    margin-bottom: 0;
-  }
-  .contacts__item:last-of-type {
-    margin-left: 32px;
-  }
-}
-
-.contacts__icon-envelope {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__icon-envelope {
-    display: inline-flex;
-    width: 14px;
-    height: 10px;
-    margin-right: 10px;
-    fill: currentColor;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts__icon-envelope {
-    width: 16px;
-    height: 12px;
-  }
-}
-
-.contacts__icon-smartphone {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__icon-smartphone {
-    display: inline-flex;
-    width: 10px;
-    height: 14px;
-    margin-right: 10px;
-    fill: currentColor;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts__icon-smartphone {
-    width: 10px;
-    height: 16px;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .menu__container--social {
     display: flex;
     width: 100%;
@@ -773,6 +666,128 @@ a span {
   line-height: 1.22;
   letter-spacing: 0.02em;
   margin-right: 20px;
+  color: var(--accent-cl);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:hover, .social__link:focus {
+  color: var(--accent-cl);
+}
+
+.contacts {
+  color: var(--secondary-text-cl);
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts--phone {
+    color: var(--accent-cl);
+  }
+}
+
+.contacts__item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__item:last-of-type {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  font-size: 14px;
+  line-height: 1.17;
+  margin-bottom: 0;
+  :last-of-type {
+    margin-left: 32px;
+  }
+}
+
+.contacts__icon-envelope {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon-envelope {
+    display: inline-flex;
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+}
+
+.contacts__icon-smartphone {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon-smartphone {
+    display: inline-flex;
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
 }
 
 .page-header {

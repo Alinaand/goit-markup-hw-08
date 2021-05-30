@@ -110,88 +110,6 @@
     }
   }
 }
-
-.contacts {
-  @media screen and (max-width: 767px) {
-    margin-right: 40px;
-  }
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-direction: column;
-    margin-right: 15px;
-    color: var(--secondary-text-cl);
-    margin-left: 15px;
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    flex-direction: row;
-  }
-}
-
-.contacts__item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  margin-bottom: 32px;
-  &:last-of-type {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 64px;
-    }
-  }
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    align-items: center;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-bottom: 10px;
-  }
-  @media screen and (min-width: $desktop) {
-    font-size: 14px;
-    line-height: 1.17;
-    &:last-of-type {
-      margin-left: 32px;
-    }
-    margin-bottom: 0;
-  }
-}
-
-.contacts__icon-envelope {
-  display: none;
-  @media screen and (min-width: $tablet) {
-    display: inline-flex;
-    width: 14px;
-    height: 10px;
-    margin-right: 10px;
-    fill: currentColor;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 16px;
-    height: 12px;
-  }
-}
-.contacts__icon-smartphone {
-  display: none;
-  @media screen and (min-width: $tablet) {
-    display: inline-flex;
-    width: 10px;
-    height: 14px;
-    margin-right: 10px;
-    fill: currentColor;
-  }
-  @media screen and (min-width: $desktop) {
-    width: 10px;
-    height: 16px;
-  }
-}
 .menu__container--social {
   @media screen and (max-width: 767px) {
   display: flex; 
@@ -208,4 +126,11 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   margin-right: 20px;
+  color: var(--accent-cl);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);}
 }
