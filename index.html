@@ -23,18 +23,30 @@
       <div class="container page-header__container">
         <nav class="nav">
           <a class="logo link" href="index.html"> <span>Web</span>Studio </a>
-          <button class="btn-menu is-open">
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu__container"
+            data-menu-button
+          >
             <svg
               aria-label="Переключатель мобильного меню"
               width="40"
               height="40"
-              class="icon-cross"
             >
-              <use href="./images/icons/sprite.svg#icon-close"></use>
+              <use
+                class="icon-close"
+                href="./images/icons/sprite.svg#icon-close"
+              ></use>
 
-              <use href="./images/icons/menu.svg"></use>
+              <use
+                class="icon-menu"
+                href="./images/icons/sprite.svg#icon-menu"
+              ></use>
             </svg>
           </button>
+          <div class="menu__container" id="menu__container" data-menu></div>
           <ul class="list menu page-hader__nav">
             <li class="menu__item">
               <a class="link menu__link current" href=""> Студия</a>
@@ -51,7 +63,7 @@
           <li class="contacts__item">
             <a class="link" href="mailto:info@example.com">
               <svg class="contacts__icon-envelope">
-                <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                <use href="./images/icons/sprite.svg#icon-envelope1"></use>
               </svg>
               info@example.com</a
             >
@@ -713,6 +725,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

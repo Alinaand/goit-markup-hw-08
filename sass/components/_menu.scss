@@ -3,18 +3,55 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.btn-menu {
+.menu-button {
+  z-index: 2;
   display: inline-flex;
+  outline: 1px solid red;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
-.btn-menu .icon-close {
+.menu-button .icon-close {
   display: none;
 }
-.btn-menu.is-open .icon-close {
+.menu-button.is-open .icon-close {
   display: block;
 }
 
-.btn-menu.is-open .icon-menu {
+.menu-button.is-open .icon-menu {
   display: none;
+}
+.menu__container {
+  display: none;
+  z-index: 1;
+  
+  width: 480px;
+  height: 796px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  
+  @media screen and (max-width: 767px){
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    &.is-open {
+      display: block;
+    }
+  }
+  // @media screen and (min-width: 768px) {
+  //   display: block;
+  }
 }
 .menu__item {
   position: relative;
