@@ -127,6 +127,12 @@ a span {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
+
 @media screen and (min-width: 1199px) {
   .logo {
     font-size: 26px;
@@ -502,13 +508,17 @@ a span {
 }
 
 .menu__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .menu-button {
-  z-index: 2;
   display: inline-flex;
   outline: 1px solid red;
   width: 40px;
@@ -538,28 +548,39 @@ a span {
 
 .menu__container {
   display: none;
-  z-index: 1;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  left: 0;
   width: 480px;
   height: 796px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  text-align: center;
-  letter-spacing: 0.02em;
 }
 
-.menu__container.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .menu__container {
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+  }
+  .menu__container.is-open {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .menu__container {
-    display: block;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu__container {
+    height: 80px;
+    justify-content: space-between;
   }
 }
 
@@ -572,81 +593,188 @@ a span {
 }
 
 .current::after {
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  content: "";
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background: var(--accent-cl);
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .current::after {
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background: var(--accent-cl);
+  }
 }
 
 .menu__item {
+  padding-bottom: 32px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (max-width: 767px) {
+  .menu__item:last-of-type {
+    margin-bottom: 306px;
+  }
 }
 
-.contacts {
-  display: none;
+@media screen and (min-width: 768px) {
+  .menu__item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu__item .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    margin-right: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .contacts {
     display: flex;
+    flex-direction: column;
     margin-right: 15px;
     color: var(--secondary-text-cl);
-    margin-left: auto;
+    margin-left: 15px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: row;
   }
 }
 
 .contacts__item {
-  display: flex;
-  align-items: center;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__item:last-of-type {
+    margin-bottom: 64px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .contacts__item {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    font-size: 14px;
+    line-height: 1.17;
+    margin-bottom: 0;
+  }
   .contacts__item:last-of-type {
     margin-left: 32px;
   }
 }
 
 .contacts__icon-envelope {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon-envelope {
+    display: inline-flex;
+    width: 14px;
+    height: 10px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon-envelope {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .contacts__icon-smartphone {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: currentColor;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon-smartphone {
+    display: inline-flex;
+    width: 10px;
+    height: 14px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon-smartphone {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu__container--link {
+    font-size: 14px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__container--link {
+    display: none;
+  }
 }
 
 .page-header {
-  outline: 1px solid red;
   border-bottom: 1px solid #ececec;
+  min-height: 60px;
 }
 
 .page-header__container {
   position: relative;
   display: flex;
   align-items: center;
-  outline: 1px solid red;
 }
 
 @media screen and (max-width: 767px) {
@@ -662,9 +790,8 @@ a span {
 .nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  outline: 1px solid red;
 }
 
 @media screen and (max-width: 767px) {
@@ -674,14 +801,20 @@ a span {
 }
 
 .page-hader__nav {
-  display: none;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .page-hader__nav {
+    flex-direction: column;
+    margin-left: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .page-hader__nav {
     display: flex;
     align-items: center;
-    outline: 1px solid red;
   }
 }
 

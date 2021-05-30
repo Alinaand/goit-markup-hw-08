@@ -1,10 +1,11 @@
 .menu__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-block;
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .menu-button {
-  z-index: 2;
   display: inline-flex;
   outline: 1px solid red;
   width: 40px;
@@ -28,29 +29,32 @@
 }
 .menu__container {
   display: none;
-  z-index: 1;
-  
   width: 480px;
   height: 796px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  
-  @media screen and (max-width: 767px){
+
+  @media screen and (max-width: 767px) {
+    background-color: #fff;
+
     display: none;
     position: absolute;
     top: 100%;
     width: 100%;
     left: 0;
     &.is-open {
-      display: block;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
-  // @media screen and (min-width: 768px) {
-  //   display: block;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 80px;
+    justify-content: space-between;
   }
 }
 .menu__item {
@@ -60,23 +64,139 @@
   color: var(--accent-cl);
 }
 .current::after {
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  content: "";
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  background: var(--accent-cl);
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    content: "";
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background: var(--accent-cl);
+  }
 }
 
 .menu__item {
+  padding-bottom: 32px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
+    &:last-of-type {
+      margin-bottom: 306px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    .menu__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
-.menu__item:not(:last-child) {
-  margin-right: 50px;
+
+.contacts {
+  @media screen and (max-width: 767px) {
+    margin-right: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    color: var(--secondary-text-cl);
+    margin-left: 15px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    flex-direction: row;
+  }
+}
+
+.contacts__item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  &:last-of-type {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 64px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.17;
+    &:last-of-type {
+      margin-left: 32px;
+    }
+    margin-bottom: 0;
+  }
+}
+
+.contacts__icon-envelope {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: inline-flex;
+    width: 14px;
+    height: 10px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contacts__icon-smartphone {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: inline-flex;
+    width: 10px;
+    height: 14px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 10px;
+    height: 16px;
+  }
+}
+.menu__container--link {
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
