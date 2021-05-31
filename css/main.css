@@ -127,12 +127,6 @@ a span {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 768px) {
-  .logo {
-    margin-right: 88px;
-  }
-}
-
 @media screen and (min-width: 1199px) {
   .logo {
     font-size: 26px;
@@ -572,7 +566,6 @@ a span {
 @media screen and (min-width: 768px) {
   .menu__container {
     display: flex;
-    width: 100%;
     height: 80px;
     justify-content: space-between;
   }
@@ -581,6 +574,7 @@ a span {
 @media screen and (min-width: 1200px) {
   .menu__container {
     height: 80px;
+    width: 100%;
     justify-content: space-between;
   }
 }
@@ -683,6 +677,7 @@ a span {
 @media screen and (max-width: 767px) {
   .contacts {
     margin-right: 40px;
+    flex-direction: column-reverse;
   }
 }
 
@@ -727,21 +722,25 @@ a span {
 }
 
 @media screen and (min-width: 768px) {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  margin-bottom: 10px;
+  .contacts__item {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  font-size: 14px;
-  line-height: 1.17;
-  margin-bottom: 0;
-  :last-of-type {
+  .contacts__item {
+    font-size: 14px;
+    line-height: 1.17;
+    margin-bottom: 0;
+  }
+  .contacts__item:last-of-type {
     margin-left: 32px;
   }
 }
