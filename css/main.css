@@ -514,7 +514,6 @@ a span {
 
 .menu-button {
   display: inline-flex;
-  outline: 1px solid red;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -851,10 +850,16 @@ a span {
   padding-bottom: 200px;
   background-color: var(--dark-bg);
   color: var(--alt-text-cl);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: url(../images/img@2x.jpg);
+  }
 }
 
 .feature {
@@ -1361,7 +1366,7 @@ a span {
 }
 
 .portfolio-project {
-  width: 370px;
+  flex-direction: column;
   margin-right: 30px;
   margin-bottom: 30px;
   transition-property: box-shadow;
@@ -1378,7 +1383,7 @@ a span {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .portfolio-project {
     flex-basis: calc((100% - 60px) / 2);
   }
@@ -1387,18 +1392,13 @@ a span {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .portfolio-project {
     flex-basis: calc((100% - 90px) / 3);
+    min-width: 370px;
   }
   .portfolio-project:nth-child(-n + 3) {
     margin-top: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio-project {
-    width: 370px;
   }
 }
 

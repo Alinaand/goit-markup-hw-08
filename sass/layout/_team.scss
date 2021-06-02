@@ -22,7 +22,7 @@
       margin-right: 0;
     }
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-basis: calc((100% - 60px) / 2);
     &:nth-child(2n) {
       margin-right: 0;
