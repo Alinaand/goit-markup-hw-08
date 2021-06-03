@@ -556,7 +556,7 @@ a span {
     top: 0;
     width: 100%;
     left: 0;
-    overflow: scroll;
+    overflow: auto;
   }
   .menu__container.is-open {
     display: flex;
