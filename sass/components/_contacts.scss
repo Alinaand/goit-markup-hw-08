@@ -8,14 +8,12 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-direction: column;
-      // margin-right: 15px;
-      // margin-left: 15px;
+      
       padding-top: 21px;
       padding-bottom: 21px;
     }
     @media screen and (min-width: $desktop) {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      align-items: center;
       flex-direction: row;
     }
   }
@@ -23,6 +21,9 @@
     @media screen and (max-width: 767px) {
     color: var(--accent-cl);
   }
+}
+.contacts__item .link{
+  display: block;;
 }
   .contacts__item {
     font-style: normal;
@@ -45,6 +46,9 @@
       line-height: 1.17;
       letter-spacing: 0.02em;
       margin-bottom: 10px;
+      &:last-of-type { margin-bottom: 0;
+      }
+    
     }
     @media screen and (min-width: $desktop) {
       font-size: 14px;
@@ -76,7 +80,7 @@
       display: inline-flex;
       width: 10px;
       height: 14px;
-      margin-right: 8px;
+      margin-right: 10px;
       fill: currentColor;
     }
     @media screen and (min-width: $desktop) {

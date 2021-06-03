@@ -29,13 +29,13 @@
   display: none;
 }
 .menu__container {
-  display: none;
-  width: 480px;
-  height: 796px;
+  
+  
 
   @media screen and (max-width: 767px) {
     background-color: #fff;
-
+    width: 480px;
+    height: 796px;
     display: none;
     position: absolute;
     top: 100%;
@@ -51,7 +51,7 @@
   }
   @media screen and (min-width: $tablet) {
     display: flex;
-    
+    flex-grow: 1;
     height: 80px;
     justify-content: space-between;
   }

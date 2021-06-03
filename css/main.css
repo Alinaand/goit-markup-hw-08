@@ -107,8 +107,6 @@ img {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -125,6 +123,12 @@ a span {
   font-weight: bold;
   font-family: var(--title-font);
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
 }
 
 @media screen and (min-width: 1199px) {
@@ -539,15 +543,11 @@ a span {
   display: none;
 }
 
-.menu__container {
-  display: none;
-  width: 480px;
-  height: 796px;
-}
-
 @media screen and (max-width: 767px) {
   .menu__container {
     background-color: #fff;
+    width: 480px;
+    height: 796px;
     display: none;
     position: absolute;
     top: 100%;
@@ -565,6 +565,7 @@ a span {
 @media screen and (min-width: 768px) {
   .menu__container {
     display: flex;
+    flex-grow: 1;
     height: 80px;
     justify-content: space-between;
   }
@@ -684,8 +685,6 @@ a span {
   .contacts {
     display: flex;
     flex-direction: column;
-    margin-right: 15px;
-    margin-left: 15px;
     padding-top: 21px;
     padding-bottom: 21px;
   }
@@ -693,8 +692,7 @@ a span {
 
 @media screen and (min-width: 1200px) {
   .contacts {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    align-items: center;
     flex-direction: row;
   }
 }
@@ -703,6 +701,10 @@ a span {
   .contacts--phone {
     color: var(--accent-cl);
   }
+}
+
+.contacts__item .link {
+  display: block;
 }
 
 .contacts__item {
@@ -730,6 +732,9 @@ a span {
     line-height: 1.17;
     letter-spacing: 0.02em;
     margin-bottom: 10px;
+  }
+  .contacts__item:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -775,7 +780,7 @@ a span {
     display: inline-flex;
     width: 10px;
     height: 14px;
-    margin-right: 8px;
+    margin-right: 10px;
     fill: currentColor;
   }
 }
