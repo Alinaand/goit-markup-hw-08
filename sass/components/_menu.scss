@@ -30,9 +30,10 @@
 }
 .menu__container {
   @media screen and (max-width: 767px) {
+    position: fixed;
     background-color: #fff;
     width: 480px;
-    max-height: 796px;
+    // max-height: 796px;
     height: 100vh;
     padding: 40px 48px;
     display: none;
