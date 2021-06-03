@@ -33,7 +33,7 @@
     position: fixed;
     background-color: #fff;
     width: 480px;
-    // max-height: 796px;
+
     height: 100vh;
     padding: 40px 48px;
     display: none;
@@ -42,6 +42,7 @@
     width: 100%;
     left: 0;
     overflow-y: scroll;
+    overflow: hidden;
     &.is-open {
       display: flex;
       align-items: flex-start;
