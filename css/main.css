@@ -548,7 +548,7 @@ a span {
   .menu__container {
     background-color: #fff;
     width: 480px;
-    height: 796px;
+    max-height: 796px;
     height: 100vh;
     padding: 40px 48px;
     display: none;
