@@ -2,6 +2,7 @@
 .contacts {
     color: var(--secondary-text-cl);
     @media screen and (max-width: 767px) {
+      display: flex;
       margin-right: 40px;
       flex-direction: column-reverse;
     }
@@ -48,7 +49,6 @@
       margin-bottom: 10px;
       &:last-of-type { margin-bottom: 0;
       }
-    
     }
     @media screen and (min-width: $desktop) {
       font-size: 14px;
