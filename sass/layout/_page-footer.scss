@@ -4,9 +4,17 @@
   color: var(--alt-text-cl);
   background-color: var(--dark-bg);
 }
+
 .page-footer__logo {
   margin-bottom: 20px;
   color: var(--alt-text-cl);
+  @media screen and (min-width:$tablet) {
+    margin-right: 0;
+  }
+  
+}
+.page-footer__contacts .logo{
+  
 }
 /*  display: flex;
    align-items: center;
