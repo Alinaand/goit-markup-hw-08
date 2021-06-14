@@ -558,7 +558,6 @@ a span {
     width: 100%;
     left: 0;
     overflow-y: scroll;
-    overflow: hidden;
   }
   .menu__container.is-open {
     display: flex;
@@ -1124,7 +1123,14 @@ a span {
 
 @media screen and (min-width: 768px) {
   .page-footer__logo {
-    margin-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__logo {
+    margin-left: 0;
   }
 }
 
@@ -1258,7 +1264,6 @@ a span {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1388,7 +1393,7 @@ a span {
   transform: translateY(0);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .portfolio-project {
     flex-basis: calc((100% - 60px) / 2);
     margin-right: 30px;

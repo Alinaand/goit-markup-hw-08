@@ -9,13 +9,18 @@
   margin-bottom: 20px;
   color: var(--alt-text-cl);
   @media screen and (min-width:$tablet) {
-    margin-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (min-width:$desktop) {
+    margin-left: 0;
+    
   }
   
 }
-.page-footer__contacts .logo{
+// .page-footer__contacts .logo{
   
-}
+// }
 /*  display: flex;
    align-items: center;
   justify-content: center;
