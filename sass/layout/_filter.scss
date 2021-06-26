@@ -1,7 +1,15 @@
 .filter__list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 .filter__btn {
   font-weight: 500;
@@ -26,5 +34,13 @@
     background-color: var(--accent-cl);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  @media screen and (max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+    &:nth-child(3n + 1) {
+      margin-left: 15px;
+    }
   }
 }
