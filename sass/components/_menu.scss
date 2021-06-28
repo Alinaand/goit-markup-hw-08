@@ -29,21 +29,20 @@
   display: none;
 }
 .menu__container {
-  width: 100%;
-  @media screen  and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     position: fixed;
     background-color: #fff;
-    width: 480px;
+    max-width: 480px;
 
     height: 100vh;
     padding: 40px 48px;
     display: none;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vw;
     left: 0;
     overflow-y: scroll;
-    
+
     &.is-open {
       display: flex;
       align-items: flex-start;

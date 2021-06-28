@@ -298,14 +298,13 @@ a span {
 
 .modal {
   position: absolute;
-  z-index: 12;
+  z-index: 99;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  /*
-      max-height: 100vh;
-      overflow-y: auto;*/
+  max-height: 100vh;
+  overflow-y: auto;
   background-color: var(--main-bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -544,21 +543,17 @@ a span {
   display: none;
 }
 
-.menu__container {
-  width: 100%;
-}
-
 @media screen and (max-width: 767px) {
   .menu__container {
     position: fixed;
     background-color: #fff;
-    width: 480px;
+    max-width: 480px;
     height: 100vh;
     padding: 40px 48px;
     display: none;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vw;
     left: 0;
     overflow-y: scroll;
   }
@@ -812,6 +807,7 @@ a span {
 @media screen and (max-width: 767px) {
   .page-header__container {
     min-height: 60px;
+    position: relative;
   }
 }
 
@@ -820,7 +816,6 @@ a span {
 }
 
 .nav {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
