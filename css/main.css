@@ -545,6 +545,10 @@ a span {
   display: none;
 }
 
+.menu__container {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .menu__container {
     position: fixed;
@@ -1020,6 +1024,8 @@ a span {
   margin-right: -30px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .team__card {
@@ -1363,7 +1369,8 @@ a span {
   padding-left: 29px;
   padding-right: 62px;
   cursor: pointer;
-  margin-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -1374,6 +1381,13 @@ a span {
   border-radius: 4px;
   color: var(--alt-text-cl);
   border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__btn {
+    margin-left: 12px;
+    margin-right: 0;
+  }
 }
 
 .filter__list {

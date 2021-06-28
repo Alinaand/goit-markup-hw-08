@@ -29,7 +29,8 @@
   display: none;
 }
 .menu__container {
-  @media screen and (max-width: 767px) {
+  width: 100%;
+  @media screen  and (max-width: 767px) {
     position: fixed;
     background-color: #fff;
     width: 480px;
