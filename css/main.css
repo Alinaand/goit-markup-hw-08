@@ -547,13 +547,12 @@ a span {
   .menu__container {
     position: fixed;
     background-color: #fff;
-    max-width: 480px;
+    z-index: 7;
     height: 100vh;
     padding: 40px 48px;
     display: none;
     position: absolute;
     top: 0;
-    width: 100vw;
     left: 0;
     overflow-y: scroll;
   }
@@ -561,6 +560,8 @@ a span {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    top: 0px;
+    left: 0px;
   }
 }
 
