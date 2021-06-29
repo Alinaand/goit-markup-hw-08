@@ -663,11 +663,23 @@ a span {
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    margin-right: 20px;
   }
 }
 
-.menu__social-Link {
+@media screen and (max-width: 767px) {
+  .menu__social-item:nth-last-child::after {
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 22px;
+    width: 1px;
+    vertical-align: middle;
+    background-color: rgba(var(--accent-cl), 0.2);
+  }
+}
+
+.menu__social-item {
   color: var(--accent-cl);
 }
 
@@ -1110,7 +1122,7 @@ a span {
   border-radius: 4px;
   border: 1px solid var(--social-icons);
   justify-content: center;
-  padding: 16px 32px;
+  padding: 16px 50px;
   margin: 15px;
   transition-property: background-color;
   transition-duration: 250ms;
@@ -1358,6 +1370,12 @@ a span {
 .subcribe__form {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .subcribe__form {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {

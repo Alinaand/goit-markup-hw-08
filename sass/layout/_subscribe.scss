@@ -2,20 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-flex-direction: column;
-  
-  @media screen and (min-width: $desktop){
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
     align-items: flex-start;
   }
-    
-  
-  
 }
 .subcribe__input {
   height: 50px;
   padding: 15px 16px;
   outline: none;
-  
+
   color: var(--alt-text-cl);
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -36,7 +33,9 @@ flex-direction: column;
 .subcribe__form {
   display: flex;
   flex-direction: column;
-
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -65,8 +64,8 @@ flex-direction: column;
   cursor: pointer;
   margin-right: auto;
   margin-left: auto;
-  
-  @media screen and (min-width: 1200px){
+
+  @media screen and (min-width: 1200px) {
     margin-left: 12px;
     margin-right: 0;
   }

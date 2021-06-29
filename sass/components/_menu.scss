@@ -131,9 +131,30 @@
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    margin-right: 20px;
+    // margin-right: 10px;
+    // padding-right: 10px;
+    // border-right: 1px solid rgba(33, 33, 33, 0.2);
+    // &:nth-last-child {
+    //   border-right: none;
+    //   padding-right: 0;
+    // }
   }
 }
-.menu__social-Link {
+.menu__social-item {
+  @media screen and (max-width: 767px) {
+    &:nth-last-child::after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 22px;
+      width: 1px;
+      vertical-align: middle;
+      background-color: rgba(var(--accent-cl), 0.2);
+    }
+  }
+}
+
+.menu__social-item {
   color: var(--accent-cl);
 }
