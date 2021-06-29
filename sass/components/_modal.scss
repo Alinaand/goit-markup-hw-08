@@ -26,9 +26,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media screen and (max-width: 1199px) {
-    max-width: 450px;
-  }
+  @media screen and (min-width: 480px){
+  min-width: 450px;
+  max-height: 609px;
+}
+  
   @media screen and (min-width: 1200px) {
     min-height: 581px;
     min-width: 528px;
@@ -62,6 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
 }
 .form__btn--close:hover,
 .form__btn--close:focus {

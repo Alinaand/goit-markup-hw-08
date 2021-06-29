@@ -5,6 +5,7 @@
     padding-bottom: 32px;
   }
 }
+
 .menu-button {
   display: inline-flex;
   z-index: 9;
@@ -28,28 +29,40 @@
 .menu-button.is-open .icon-menu {
   display: none;
 }
+
 .menu__container {
+  @media screen and (max-width: 479px){
+min-width:320px;
+padding: 20px 28px;
+
+}
   @media screen and (max-width: 767px) {
     position: fixed;
     background-color: #fff;
-    // max-width: 480px;
+    
     z-index: 7;
+    min-width: 480px;
 
     height: 100vh;
     padding: 40px 48px;
     display: none;
-    position: absolute;
+  
     top: 0;
-    // width: 100vw;
-    left: 0;
+     right: auto;
+     left: auto;
+   
     overflow-y: scroll;
 
     &.is-open {
+      position: fixed;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
+     justify-content: space-between;
       top: 0px;
-      left: 0px;
+     
+     right: auto;
+     left: auto;
     }
   }
   @media screen and (min-width: $tablet) {
@@ -92,11 +105,11 @@
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  @media screen and (max-width: 767px) {
-    &:last-of-type {
-      margin-bottom: 306px;
-    }
-  }
+  // @media screen and (max-width: 767px) {
+  //   &:last-of-type {
+  //     margin-bottom: 306px;
+  //   }
+  // }
   @media screen and (min-width: $tablet) {
     font-style: normal;
     font-weight: 500;
@@ -118,9 +131,9 @@
 .menu__social {
   @media screen and (max-width: 767px) {
     display: flex;
-    width: 100%;
+    
     justify-content: space-between;
-    margin-right: 40px;
+   
   }
   @media screen and (min-width: $tablet) {
     display: none;
@@ -131,7 +144,7 @@
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-    // margin-right: 10px;
+     margin-right: 20px;
     // padding-right: 10px;
     // border-right: 1px solid rgba(33, 33, 33, 0.2);
     // &:nth-last-child {
@@ -140,20 +153,25 @@
     // }
   }
 }
-.menu__social-item {
+
   @media screen and (max-width: 767px) {
-    &:nth-last-child::after {
+    .menu__social-item{
+      position: relative;
+    }
+    .menu__social-item:not(:last-child)::after {
       content: "";
       display: inline-block;
       margin-left: 10px;
-      margin-right: 10px;
+      // margin-right: 10px;
       height: 22px;
       width: 1px;
-      vertical-align: middle;
-      background-color: rgba(var(--accent-cl), 0.2);
+      top: 0;
+      left: 100%;
+      position: absolute;
+      background: var(--accent-cl)
     }
   }
-}
+
 
 .menu__social-item {
   color: var(--accent-cl);
