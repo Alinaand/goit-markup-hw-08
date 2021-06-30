@@ -698,8 +698,9 @@ a span {
 @media screen and (max-width: 767px) {
   .contacts {
     display: flex;
-    margin-right: 40px;
     flex-direction: column-reverse;
+    margin-top: auto;
+    margin-top: 64px;
   }
 }
 
