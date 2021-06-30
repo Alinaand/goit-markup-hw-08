@@ -22,15 +22,15 @@
 
 .modal {
   position: absolute;
-  z-index: 99;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media screen and (min-width: 480px){
-  min-width: 450px;
-  max-height: 609px;
-}
-  
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+    max-height: 609px;
+  }
+
   @media screen and (min-width: 1200px) {
     min-height: 581px;
     min-width: 528px;

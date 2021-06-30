@@ -109,11 +109,7 @@
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  // @media screen and (max-width: 767px) {
-  //   &:last-of-type {
-  //     margin-bottom: 306px;
-  //   }
-  // }
+
   @media screen and (min-width: $tablet) {
     font-style: normal;
     font-weight: 500;
@@ -165,7 +161,6 @@
     content: "";
     display: inline-block;
     margin-left: 10px;
-    // margin-right: 10px;
     height: 22px;
     width: 1px;
     top: 0;

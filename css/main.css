@@ -298,7 +298,7 @@ a span {
 
 .modal {
   position: absolute;
-  z-index: 99;
+  z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -700,7 +700,6 @@ a span {
     display: flex;
     flex-direction: column-reverse;
     margin-top: auto;
-    margin-top: 64px;
   }
 }
 
@@ -736,12 +735,12 @@ a span {
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 @media screen and (max-width: 767px) {
   .contacts__item:last-of-type {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 }
 

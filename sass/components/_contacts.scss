@@ -2,10 +2,8 @@
   color: var(--secondary-text-cl);
   @media screen and (max-width: 767px) {
     display: flex;
-    // margin-right: 40px;
     flex-direction: column-reverse;
     margin-top: auto;
-    margin-top: 64px;
   }
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -33,11 +31,11 @@
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 
   @media screen and (max-width: 767px) {
     &:last-of-type {
-      margin-bottom: 64px;
+      margin-bottom: 32px;
     }
   }
   @media screen and (min-width: $tablet) {
