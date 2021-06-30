@@ -31,38 +31,42 @@
 }
 
 .menu__container {
-  @media screen and (max-width: 479px){
-min-width:320px;
-padding: 20px 28px;
-
-}
-  @media screen and (max-width: 767px) {
-    position: fixed;
-    background-color: #fff;
-    
-    z-index: 7;
-    min-width: 480px;
-
+  @media screen and (max-width: 479px) {
+    min-width: 320px;
+    padding: 20px 28px;
     height: 100vh;
-    padding: 40px 48px;
+    width: 100vw;
+  }
+  @media screen and (max-width: 767px) {
+    // position: fixed;
+    background-color: #fff;
+
+    z-index: 7;
+    // min-width: 480px;
+
+    // height: 100vh;
+    // width: 100vw;
+    // padding: 40px 48px;
     display: none;
-  
-    top: 0;
-     right: auto;
-     left: auto;
-   
-    overflow-y: scroll;
+
+    // top: 0;
+    // left: 0;
+    // overflow: auto;
+    // overflow-y: scroll;
 
     &.is-open {
       position: fixed;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
-     justify-content: space-between;
-      top: 0px;
-     
-     right: auto;
-     left: auto;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      overflow-y: scroll;
+      height: 100vh;
+      width: 100vw;
+      padding: 40px 48px;
     }
   }
   @media screen and (min-width: $tablet) {
@@ -131,9 +135,8 @@ padding: 20px 28px;
 .menu__social {
   @media screen and (max-width: 767px) {
     display: flex;
-    
+
     justify-content: space-between;
-   
   }
   @media screen and (min-width: $tablet) {
     display: none;
@@ -144,7 +147,7 @@ padding: 20px 28px;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-     margin-right: 20px;
+    margin-right: 20px;
     // padding-right: 10px;
     // border-right: 1px solid rgba(33, 33, 33, 0.2);
     // &:nth-last-child {
@@ -154,24 +157,23 @@ padding: 20px 28px;
   }
 }
 
-  @media screen and (max-width: 767px) {
-    .menu__social-item{
-      position: relative;
-    }
-    .menu__social-item:not(:last-child)::after {
-      content: "";
-      display: inline-block;
-      margin-left: 10px;
-      // margin-right: 10px;
-      height: 22px;
-      width: 1px;
-      top: 0;
-      left: 100%;
-      position: absolute;
-      background: var(--accent-cl)
-    }
+@media screen and (max-width: 767px) {
+  .menu__social-item {
+    position: relative;
   }
-
+  .menu__social-item:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    // margin-right: 10px;
+    height: 22px;
+    width: 1px;
+    top: 0;
+    left: 100%;
+    position: absolute;
+    background: var(--accent-cl);
+  }
+}
 
 .menu__social-item {
   color: var(--accent-cl);

@@ -549,22 +549,16 @@ a span {
   .menu__container {
     min-width: 320px;
     padding: 20px 28px;
+    height: 100vh;
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 767px) {
   .menu__container {
-    position: fixed;
     background-color: #fff;
     z-index: 7;
-    min-width: 480px;
-    height: 100vh;
-    padding: 40px 48px;
     display: none;
-    top: 0;
-    right: auto;
-    left: auto;
-    overflow-y: scroll;
   }
   .menu__container.is-open {
     position: fixed;
@@ -572,9 +566,13 @@ a span {
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
-    top: 0px;
-    right: auto;
-    left: auto;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    padding: 40px 48px;
   }
 }
 
